@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Generator\FSMLang\" />
+    <Folder Include="Generator\Verilog\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FSMModel\FSMModel.csproj" />
+    <ProjectReference Include="..\MIcroC\MIcroC.csproj" />
+  </ItemGroup>
+
+</Project>
