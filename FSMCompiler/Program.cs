@@ -1,6 +1,7 @@
 ﻿using MikroPicDesigns.FSMCompiler.CmdLine;
 using MikroPicDesigns.FSMCompiler.v2.Generator;
 using MikroPicDesigns.FSMCompiler.v2.Generator.C;
+using MikroPicDesigns.FSMCompiler.v2.Generator.CPP;
 using MikroPicDesigns.FSMCompiler.v2.Generator.DOT;
 using MikroPicDesigns.FSMCompiler.v2.Loader;
 using MikroPicDesigns.FSMCompiler.v2.Model;
@@ -13,7 +14,7 @@ namespace MikroPicDesigns.FSMCompiler {
         static void Main(string[] args) {
 
             //            try {
-            CmdLineParser cmdLineParser = new CmdLineParser("FSMCompiler v1.0");
+            CmdLineParser cmdLineParser = new CmdLineParser("FSMCompiler v2.0");
             cmdLineParser.Add(new ArgumentDefinition("source", 1, "Archivo de entrada.", true));
             cmdLineParser.Add(new OptionDefinition("G", "Generador."));
             cmdLineParser.Add(new OptionDefinition("H", "Ayuda."));
@@ -72,7 +73,7 @@ namespace MikroPicDesigns.FSMCompiler {
                         break;
 
                     case "CPP":
-                        generator = new v2.Generator.CPP.CPPGenerator(generatorParameters);
+                        generator = new CPPGenerator(generatorParameters);
                         break;
                 }
 

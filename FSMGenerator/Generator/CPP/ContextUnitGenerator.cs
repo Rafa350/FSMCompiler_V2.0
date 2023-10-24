@@ -69,7 +69,7 @@ namespace MikroPicDesigns.FSMCompiler.v2.Generator.CPP {
             // Declara la variable per les instancies dels estats.
             //
             ub.AddMemberDeclaration(new VariableDeclaration {
-                Name = String.Format("states[{0}]", elements.Count),
+                Name = String.Format("_states[{0}]", elements.Count),
                 ValueType = TypeIdentifier.FromName(String.Format("{0}*", stateClassName))
             });
 
@@ -113,7 +113,7 @@ namespace MikroPicDesigns.FSMCompiler.v2.Generator.CPP {
         private VariableDeclaration MakeOwnerVariable(Machine machine) {
 
             return new VariableDeclaration(
-                "owner",
+                "_owner",
                 AccessSpecifier.Private,
                 ImplementationSpecifier.Instance,
                 TypeIdentifier.FromName(String.Format("{0}*", ownerClassName)),

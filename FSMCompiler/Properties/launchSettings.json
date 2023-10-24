@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FSMCompiler": {
+      "commandName": "Project",
+      "commandLineArgs": "/G:CPP /P:OutputType=ContextCode /P:ContextCodeFileName=\"x.cpp\" C:\\Users\\Rafael\\Documents\\Projectes\\Embedded\\APK-MAIN\\Fsm\\PrintModuleFSM.xsm"
+    }
+  }
+}
